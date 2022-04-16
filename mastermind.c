@@ -17,9 +17,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < n; i++)
     {
         x[i] = (rand() * 6L) / RAND_MAX + 1;
-        // printf("%d", x[i]);
     }
-    printf("\n");
 
     do
     {
@@ -28,7 +26,6 @@ int main(int argc, char *argv[])
         count++;
 
         scanf("%u", &input);
-        // printf("%d\n", input);
 
         for (int i = n - 1; i >= 0; i--)
         {
@@ -38,14 +35,6 @@ int main(int argc, char *argv[])
 
         black = 0;
         white = 0;
-
-        // for (int i = 0; i < 4; i++)
-        // {
-        //     if (guess[i] == x[i])
-        //     {
-        //         black++;
-        //     }
-        // }
 
         for (int i = 0; i < n; i++)
         {
@@ -58,16 +47,13 @@ int main(int argc, char *argv[])
             {
                 for (int j = 0; j < n; j++)
                 {
-                    // printf("i=%d, j=%d: ", i, j);
                     if (guess[j] == x[i])
                     {
                         white++;
-                        // printf(" white\n");
                         break;
                     }
                 }
             }
-            // printf("\n");
         }
 
         printf("%d black, %d white\n", black, white);
